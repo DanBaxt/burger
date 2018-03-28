@@ -18,6 +18,9 @@ var router = require('./controllers/burgers_controller.js');
 app.use('/', router);
 
 
+app.use(express.static("public"));
+
+
 var port = process.env.PORT || 3000;
 console.log("You are connected at localhost: " + 3000)
 app.listen(port);
