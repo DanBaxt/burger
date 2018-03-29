@@ -20,9 +20,8 @@ router.get('/', function(req, res) {
     });
   });
   //Update is not working right
-  router.put("api/burgers/:id", function(req, res) {
+  router.put("/api/burgers/:id", function(req, res) {
   
-    console.log("condition", condition);
     burger.update(req.params.id, function(result) {
       console.log(result);
       res.sendStatus(200);
